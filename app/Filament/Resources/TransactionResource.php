@@ -29,7 +29,7 @@ class TransactionResource extends Resource
                 Forms\Components\Select::make('category_id')
                     ->relationship('category', 'name')
                     ->required(),
-                Forms\Components\DatePicker::make('date')
+                Forms\Components\DatePicker::make('date_transaction')
                     ->required(),
                 Forms\Components\TextInput::make('amount')
                     ->required()
@@ -59,7 +59,7 @@ class TransactionResource extends Resource
                     ->trueColor('danger')
                     ->falseColor('success')
                     ->boolean(),
-                Tables\Columns\TextColumn::make('date')
+                Tables\Columns\TextColumn::make('date_transaction')
                     ->label('Tanggal')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('amount')
